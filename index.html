@@ -1,0 +1,90 @@
+
+        
+              
+      
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/all.min.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/main.css">
+  <body>
+  <section class="py-5 position-relative allsec">
+    <div class="container ">
+        <h1  class="text-center pt-5 pb-5 ">
+            Bookmark
+        </h1>
+        <div class=" Bbody w-100 flex-column justify-content-center align-items-center gap-4">
+    <div class="mb-4  d-flex justify-content-center align-items-center">
+        
+        <h2 > 
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+
+        </h2>
+    
+    </div>
+            <div class="  d-flex justify-content-center flex-column w-100">
+                <label for="bookmarkname" class="pb-2 fs-6 fw-semibold">
+                    <i class="fa-solid fa-book-bookmark pe-2"></i>
+                   <span class="fw-bold fs-6"> site name</span>
+                </label>
+                <input oninput="validation('bookmarkName',/^[a-zA-Z]\w{3,10}$/)"   type="text" placeholder="Bookmark name" id="bookmarkName" class="form-control w-100"> 
+            </div>
+            <div class="d-flex justify-content-center flex-column pt-4 w-100">
+                <label for="bookmarkname" class="pb-2">
+                    <i class="fa-solid fa-link pe-1"></i>  
+                   <span class="fw-bold fs-6"> site URL</span>
+                </label>
+                <input oninput="validation('bookmarkSite',/^(https?:\/\/)?(w{3}\.)?\w+\.\w{2,}\/?(:\d{2,5})?(\/\w+)*$/)"  type="text" placeholder="website URL" id="bookmarkSite" class="form-control w-100">
+               
+            </div>
+
+        <div class=" mb-4 mt-5  d-flex align-content-center align-items-center justify-content-center mt-3">
+            <button onclick="addinfo()";
+           class="btn btn-danger  px-5 text-center" type="submit" id="submitBtn">
+                 submit</button> 
+        </div>
+
+  
+        
+</div>
+
+
+
+    </div>
+  </section>
+  <div class="container text-center bg-white">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Website Name</th>
+            <th scope="col">Visit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="Tbody">
+         
+          
+          
+        </tbody>
+      </table>
+
+      
+
+      
+  </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
